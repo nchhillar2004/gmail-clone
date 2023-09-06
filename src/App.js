@@ -1,24 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header/Header';
+import Sidebar from './components/Sidebar/Sidebar';
+import InboxMailView from './routes/Mail View/Inbox/InboxMailView';
+import StarredMailView from './routes/Mail View/Starred/StarredMailView';
+import EmailList from './routes/Emails Lists/EmailList';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app">
+        <Header/>
+        <div className="app_body">
+              <Sidebar/>
+            <Routes>
+                <Route path='/mail/in' element={<InboxMailView />}/>
+                <Route path='/mail/st' element={<StarredMailView />}/>
+                <Route path='/inbox' element={<EmailList filter="inbox"/>}/>
+                <Route path='/starred' element={<EmailList filter="starred"/>} />
+                <Route path='/snoozed' element={<EmailList filter="snoozed"/>} />
+                <Route path='/' element={<EmailList filter="inbox"/>} />
+            </Routes>
+
+        </div>
+
+      </div>
+    </Router>
   );
 }
 

@@ -1,0 +1,61 @@
+.StarredRow{
+    display: flex;
+    align-items: center;
+    height: 46px;
+    border-bottom: 1px solid whitesmoke;
+    cursor: pointer;
+    justify-content: space-between;
+    z-index: 999;
+    margin-right: 6px;
+}
+
+.StarredRow:hover{
+    border-top: 1px solid whitesmoke;
+    box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.24);
+}
+
+.StarredRow_options{
+    display: flex;
+    align-items: center;
+}
+
+.StarredRow_hover_options{
+    display: none;
+}
+
+.StarredRow_hover_options:hover{
+    display: inline;
+}
+
+.StarredRow_sender >h3{
+    width: 100px;
+    font-size: 18px;
+}
+
+.StarredRow_subject >h4{
+    width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+}
+
+.StarredRow_content >p{
+    max-width: 420px;
+    white-space: nowrap;
+    margin-right: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+}
+
+.StarredRow_time{
+    justify-self: end;
+    margin-right: 8px;
+    width: 50px;
+    padding-left: 8px;
+}
+
+.StarredRow_hover_options{
+    display: inline;
+}

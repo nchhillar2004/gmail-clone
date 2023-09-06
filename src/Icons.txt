@@ -1,0 +1,6 @@
+import VerifiedRoundedIcon from '@mui/icons-material/VerifiedRounded';
+
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+
+import AddRoundedIcon from '@mui/icons-material/AddRounded';
+import AddPhotoAlternateOutlinedIcon from '@mui/icons-material/AddPhotoAlternateOutlined';
